@@ -1,4 +1,6 @@
-package util
+package appconfig
+
+import "github.com/jjmeg/WorkChopProject/util/log"
 
 type ServerConfig struct {
 	Host            string `json:"host"`
@@ -12,7 +14,7 @@ type ServerConfig struct {
 type AppConfig struct {
 	Name   string        `json:"name"`
 	Server *ServerConfig `json:"server"`
-	Logger *LogConfig    `json:"logger"`
+	Logger *log.Config   `json:"logger"`
 }
 
 func (c *AppConfig) Copy() *AppConfig {

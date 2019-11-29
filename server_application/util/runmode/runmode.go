@@ -1,4 +1,4 @@
-package util
+package runmode
 
 type RunMode string
 

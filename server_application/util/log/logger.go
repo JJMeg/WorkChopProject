@@ -1,4 +1,4 @@
-package util
+package log
 
 import (
 	"github.com/sirupsen/logrus"
@@ -6,13 +6,13 @@ import (
 	"os"
 )
 
-type LogConfig struct {
+type Config struct {
 	Output string `json:"output"`
 	Level  string `json:"level"`
 	Format string `json:"format"`
 }
 
-func Newlogger(cfg *LogConfig) (*logrus.Logger, error) {
+func Newlogger(cfg *Config) (*logrus.Logger, error) {
 	level, err := logrus.ParseLevel(cfg.Level)
 	if err != nil {
 		return nil, err

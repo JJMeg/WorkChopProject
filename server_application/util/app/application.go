@@ -2,32 +2,34 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/jjmeg/WorkChopProject/util"
+	"github.com/jjmeg/WorkChopProject/util/appconfig"
+	"github.com/jjmeg/WorkChopProject/util/log"
+	"github.com/jjmeg/WorkChopProject/util/runmode"
 	"github.com/sirupsen/logrus"
 	"net/http"
 	"time"
-
-	"github.com/jjmeg/WorkChopProject/util"
 )
 
 type Applicaiton struct {
 	*gin.Engine
-	Mode util.RunMode
+	Mode runmode.RunMode
 
-	cfg    *util.AppConfig
+	cfg    *appconfig.AppConfig
 	logger *logrus.Logger
 }
 
-func NewApplication(runMode util.RunMode, srcPath string, cfg interface{}) *Applicaiton {
+func NewApplication(runMode runmode.RunMode, srcPath string, cfg interface{}) *Applicaiton {
 	if err := util.Load(string(runMode), srcPath, &cfg); err != nil {
 		panic(err)
 	}
 
-	var appCfg *util.AppConfig
+	var appCfg *appconfig.AppConfig
 	if err := util.Load(string(runMode), srcPath, &appCfg); err != nil {
 		panic(err)
 	}
 
-	logger, err := util.Newlogger(appCfg.Logger)
+	logger, err := log.Newlogger(appCfg.Logger)
 	if err != nil {
 		panic(err)
 	}
@@ -53,4 +55,8 @@ func (app *Applicaiton) Run() {
 	if err := s.ListenAndServe(); err != nil {
 		panic(err)
 	}
+}
+
+func (app *Applicaiton) Logger() *logrus.Logger {
+	return app.logger
 }

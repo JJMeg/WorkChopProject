@@ -1,0 +1,26 @@
+{
+  "name": "ent-meta",
+  "server": {
+    "host": "0.0.0.0:9000",
+    "request_timeout": 0,
+    "response_timeout": 0,
+    "request_max": 50000,
+    "throttle": 10000,
+    "request_id": "x-jdcloud-request-id",
+    "request_pin": "x-jdcloud-pin"
+  },
+  "logger": {
+    "output": "stdout",
+    "level": "debug"
+  },
+  "mongo": {
+    "host": "localhost",
+    "user": "",
+    "password": "",
+    "database": "ent_prod",
+    "mode": "Strong",
+    "pool": 25,
+    "timeout": 5,
+    "pem_file": ""
+  }
+}
