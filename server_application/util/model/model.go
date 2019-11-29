@@ -3,12 +3,13 @@ package model
 import (
 	"crypto/tls"
 	"crypto/x509"
-	"github.com/globalsign/mgo"
-	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net"
 	"sync"
 	"time"
+
+	"github.com/globalsign/mgo"
+	"github.com/sirupsen/logrus"
 )
 
 const (

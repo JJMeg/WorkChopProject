@@ -1,14 +1,16 @@
 package app
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/jjmeg/WorkChopProject/util"
-	"github.com/jjmeg/WorkChopProject/util/appconfig"
-	"github.com/jjmeg/WorkChopProject/util/log"
-	"github.com/jjmeg/WorkChopProject/util/runmode"
-	"github.com/sirupsen/logrus"
 	"net/http"
 	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
+
+	"github.com/jjmeg/WorkChopProject/util/appconfig"
+	"github.com/jjmeg/WorkChopProject/util/config"
+	"github.com/jjmeg/WorkChopProject/util/log"
+	"github.com/jjmeg/WorkChopProject/util/runmode"
 )
 
 type Applicaiton struct {
@@ -20,12 +22,12 @@ type Applicaiton struct {
 }
 
 func NewApplication(runMode runmode.RunMode, srcPath string, cfg interface{}) *Applicaiton {
-	if err := util.Load(string(runMode), srcPath, &cfg); err != nil {
+	if err := config.Load(string(runMode), srcPath, &cfg); err != nil {
 		panic(err)
 	}
 
 	var appCfg *appconfig.AppConfig
-	if err := util.Load(string(runMode), srcPath, &appCfg); err != nil {
+	if err := config.Load(string(runMode), srcPath, &appCfg); err != nil {
 		panic(err)
 	}
 

@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
+
 	"github.com/jjmeg/WorkChopProject/model"
 	"github.com/jjmeg/WorkChopProject/util/app"
 	"github.com/jjmeg/WorkChopProject/util/context"

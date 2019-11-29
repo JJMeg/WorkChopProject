@@ -1,9 +1,10 @@
 package log
 
 import (
-	"github.com/sirupsen/logrus"
 	"io"
 	"os"
+
+	"github.com/sirupsen/logrus"
 )
 
 type Config struct {
