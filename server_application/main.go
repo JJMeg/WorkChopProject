@@ -2,10 +2,11 @@ package main
 
 import (
 	"flag"
-	"github.com/jjmeg/WorkChopProject/app"
-	"github.com/jjmeg/WorkChopProject/util/runmode"
 	"os"
 	"path"
+
+	"github.com/jjmeg/WorkChopProject/app"
+	"github.com/jjmeg/WorkChopProject/util/runmode"
 )
 
 var (
