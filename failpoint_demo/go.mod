@@ -1,4 +1,4 @@
-module github.com/jjmeg/failpoint_demo
+module github.com/jjmeg/WorkChopsProject/failpoint_demo
 
 go 1.12
 

@@ -1,4 +1,4 @@
-module github.com/jjmeg/pprof_trace
+module github.com/jjmeg/WorkChopsProject/pprof_trace
 
 go 1.12
 
