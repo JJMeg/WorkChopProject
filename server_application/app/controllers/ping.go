@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/jjmeg/WorkChopProject/util/context"
+	"github.com/JJMeg/WorkChopProject/server_application/util/context"
 )
 
 var Ping *_Ping

@@ -3,10 +3,10 @@ package controllers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/jjmeg/WorkChopProject/model"
-	"github.com/jjmeg/WorkChopProject/util/app"
-	"github.com/jjmeg/WorkChopProject/util/context"
-	"github.com/jjmeg/WorkChopProject/util/runmode"
+		"github.com/JJMeg/WorkChopProject/server_application/model"
+	"github.com/JJMeg/WorkChopProject/server_application/util/app"
+	"github.com/JJMeg/WorkChopProject/server_application/util/context"
+	"github.com/JJMeg/WorkChopProject/server_application/util/runmode"
 )
 
 var (

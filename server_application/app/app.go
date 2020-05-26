@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/jjmeg/WorkChopProject/app/controllers"
-	"github.com/jjmeg/WorkChopProject/util/runmode"
+	"github.com/JJMeg/WorkChopProject/server_application/app/controllers"
+	"github.com/JJMeg/WorkChopProject/server_application/util/runmode"
 )
 
 type Application struct {

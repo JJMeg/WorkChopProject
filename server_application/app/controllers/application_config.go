@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/jjmeg/WorkChopProject/util/appconfig"
-	"github.com/jjmeg/WorkChopProject/util/model"
+	"github.com/JJMeg/WorkChopProject/server_application/util/appconfig"
+	"github.com/JJMeg/WorkChopProject/server_application/util/model"
 )
 
 type AppConfig struct {

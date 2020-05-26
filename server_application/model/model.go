@@ -4,7 +4,7 @@ import (
 	"github.com/globalsign/mgo/bson"
 	"github.com/sirupsen/logrus"
 
-	"github.com/jjmeg/WorkChopProject/util/model"
+	"github.com/JJMeg/WorkChopProject/server_application/util/model"
 )
 
 var (

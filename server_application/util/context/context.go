@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/jjmeg/WorkChopProject/util/errors"
-	"github.com/jjmeg/WorkChopProject/util/response"
+	"github.com/JJMeg/WorkChopProject/server_application/util/errors"
+	"github.com/JJMeg/WorkChopProject/server_application/util/response"
 )
 
 var (

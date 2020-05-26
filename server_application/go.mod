@@ -1,4 +1,4 @@
-module github.com/jjmeg/WorkChopProject/server_application
+module github.com/JJMeg/WorkChopProject/server_application
 
 go 1.12
 

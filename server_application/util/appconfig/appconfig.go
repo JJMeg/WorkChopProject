@@ -1,6 +1,6 @@
 package appconfig
 
-import "github.com/jjmeg/WorkChopProject/util/log"
+import "github.com/JJMeg/WorkChopProject/server_application/util/log"
 
 type ServerConfig struct {
 	Host            string `json:"host"`
